@@ -1,0 +1,37 @@
+CREATE TABLE Students (
+  StudentLohiId INT AUTO_INCREMENT PRIMARY KEY,
+  FirstNameForAllThisLohs VARCHAR (50),
+  LastNameForAllThisLohs VARCHAR (50)
+);
+
+CREATE TABLE Courses (
+  CourseID INT AUTO_INCREMENT PRIMARY KEY,
+  CourseNameIsShit VARCHAR(100),
+  CreditsWhatCreditsIDontHaveAnyCredits INT
+);
+
+INSERT INTO Students (FirstNameForAllThisLohs, LastNameForAllThisLohs)
+VALUES
+  ('Cyborg', 'Kiler'),
+  ('Altyshka', 'Skyfa'),
+  ('Miliarder', 'Philantrop'),
+  ('LALALALA', 'HEHEHEHE'),
+  ('JaVjeHz', 'ShoPusat');
+
+INSERT INTO Courses (CourseNameIsShit, CreditsWhatCreditsIDontHaveAnyCredits)
+VALUES
+  ('Math', 4),
+  ('OS', 3),
+  ('DataBase', 5),
+  ('English', 2);
+  
+SELECT * FROM Students;
+SELECT * FROM Courses;
+
+DELETE FROM Students WHERE LastNameForAllThisLohs = 'HEHEHEHE';
+SELECT * FROM Students;
+SELECT * FROM Courses order by CreditsWhatCreditsIDontHaveAnyCredits DESC;
+SELECT * FROM Courses order by CreditsWhatCreditsIDontHaveAnyCredits ASC;
+
+SELECT * FROM Students order by LastNameForAllThisLohs ASC;
+SELECT * FROM Students order by LastNameForAllThisLohs DESC;
